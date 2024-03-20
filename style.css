@@ -778,6 +778,22 @@ footer {
     --unit: 1vh;
     font-size: 14px;
   }
+  #circle1{
+    width: 15vh;
+    height: 15vh;
+  }
+  #circle1::before{
+    top: 12%;
+    right: 10%;
+  }
+  #circle2{
+    width: 10vh;
+    height: 10vh;
+  }
+  #circle2::before{
+    top: 13%;
+    right: 9%;
+  }
   #main{
     max-height: 100vh;
   }
