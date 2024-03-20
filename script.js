@@ -3,6 +3,11 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
+window.addEventListener('load',()=>{
+    const loader = document.querySelector('#loader');
+    loader.style.display = "none";
+})
+
 const navbar = document.querySelector("#navbar");
 const nav = document.querySelector('nav');
 var flag = 0;
