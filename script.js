@@ -51,6 +51,20 @@ function scrollToTop(){
     scroll.scrollTo(Card,-150);
 }
 
+const Reviews = document.querySelector('#reviews');
+const review = document.querySelectorAll('.review');
+Reviews.addEventListener("mouseover",()=>{
+    review.forEach(element => {
+        element.style.animationPlayState = 'paused';
+    });
+})
+
+Reviews.addEventListener("mouseleave",()=>{
+    review.forEach(element => {
+        element.style.animationPlayState = 'running';
+    });
+})
+
 // let tl = gsap.timeline();
 
 // tl.to('.review:nth-child(1)',{
