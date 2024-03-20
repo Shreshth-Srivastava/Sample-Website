@@ -38,6 +38,7 @@ html {
   color: white;
   font-family: Gilroy;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 @keyframes rotation {
