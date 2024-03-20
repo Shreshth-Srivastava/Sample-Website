@@ -122,7 +122,6 @@ html {
 #main {
   width: 100%;
   min-height: 100vh;
-  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -778,6 +777,9 @@ footer {
   :root {
     --unit: 1vh;
     font-size: 14px;
+  }
+  #main{
+    max-height: 100vh;
   }
   nav {
     height: 6vh;
