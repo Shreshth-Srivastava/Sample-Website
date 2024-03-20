@@ -5,6 +5,8 @@ const scroll = new LocomotiveScroll({
 
 window.addEventListener('load',()=>{
     const loader = document.querySelector('#loader');
+    const main = document.querySelector('#main');
+    main.style.maxHeight = "400vh";
     loader.style.display = "none";
 })
 
