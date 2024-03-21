@@ -862,7 +862,8 @@ footer {
     margin-top: -5rem;
   }
   #about-1 {
-    height: 10vh;
+    height: 8vh;
+    margin-bottom: .5rem;
   }
   #about-1 > h1 {
     font-size: 1.5rem;
@@ -912,13 +913,13 @@ footer {
   }
   .page-title {
     width: 80%;
-    height: 10vh;
+    height: 7vh;
   }
   .page-title > h1 {
     font-size: 1.5rem;
   }
   #reviews {
-    margin-top: -4rem;
+    margin-top: -6rem;
     width: 100%;
     height: 60%;
   }
