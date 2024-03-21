@@ -1,7 +1,48 @@
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
+gsap.registerPlugin(ScrollTrigger);
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true,
+
+  // for tablet smooth
+  tablet: { smooth: true },
+
+  // for mobile
+  smartphone: { smooth: true }
 });
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("#main", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  }
+
+  // follwoing line is not required to work pinning on touch screen
+
+  /* pinType: document.querySelector("#main").style.transform
+    ? "transform"
+    : "fixed"*/
+});
+
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+ScrollTrigger.refresh();
+
+
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('#main'),
+//     smooth: true
+// });
 
 window.addEventListener('load',()=>{
     const loader = document.querySelector('#loader');
@@ -33,22 +74,26 @@ const contact_btn = document.querySelector('#contact');
 
 about_btn.addEventListener('click',()=>{
     const About = document.querySelector('#About');
-    scroll.scrollTo(About,-50);
+    // scroll.scrollTo(About,-50);
+    locoScroll.scrollTo(About,-50);
 })
 
 reviews_btn.addEventListener('click',()=>{
     const Reviews = document.querySelector('.page-title');
-    scroll.scrollTo(Reviews,-50);
+    // scroll.scrollTo(Reviews,-50);
+    locoScroll.scrollTo(Reviews,-50);
 })
 
 contact_btn.addEventListener('click',()=>{
     const Contact = document.querySelector('footer');
-    scroll.scrollTo(Contact,-50);
+    // scroll.scrollTo(Contact,-50);
+    locoScroll.scrollTo(Contact,-50);
 })
 
 function scrollToTop(){
     const Card = document.querySelector('#Card');
-    scroll.scrollTo(Card,-150);
+    // scroll.scrollTo(Card,-150);
+    locoScroll.scrollTo(Card,-150);
 }
 
 const Reviews = document.querySelector('#reviews');
@@ -65,10 +110,70 @@ Reviews.addEventListener("mouseleave",()=>{
     });
 })
 
-// let tl = gsap.timeline();
+let tl = gsap.timeline();
 
-// tl.to('.review:nth-child(1)',{
-//     transform: "translateX(100%)",
-//     duration: 15,
-//     opacity: '1'
-// })
+var vw = window.innerWidth;
+var vh = window.innerHeight;
+
+if(vw > vh){
+    gsap.from('#about-1>h1',{
+        y: 100,
+        duration: .5,
+        // delay: .5,
+        opacity: 0,
+        scrollTrigger:{
+            trigger: '#about-1>h1',
+            scroller: '#main',
+            start: "top 100%",
+            // markers: true,
+        }
+    })
+
+    gsap.from('#about-2>p',{
+        y: -500,
+        duration: 2,
+        // delay: .5,
+        opacity: 0,
+        scrollTrigger:{
+            trigger: '#about-2>p',
+            scroller: '#main',
+            start: "top 110%",
+            // markers: true,
+        }
+    })
+
+    gsap.from('#card-1,#card-3',{
+        x: -500,
+        duration: 2,
+        opacity: 0,
+        scrollTrigger:{
+            trigger: "#card-1,#card-3",
+            scroller: "#main",
+            start: "start 50%",
+            // markers: true,
+        }
+    })
+
+    gsap.from('#card-2,#card-4',{
+        x: 500,
+        duration: 2,
+        opacity: 0,
+        scrollTrigger:{
+            trigger: "#card-1,#card-3",
+            scroller: "#main",
+            start: "start 50%",
+            // markers: true,
+        }
+    })
+
+    gsap.from('.page-title>h1',{
+        y: 100,
+        duartion: .5,
+        scrollTrigger:{
+            trigger: '.page-title>h1',
+            scroller: '#main',
+            start: "top 100%",
+            // markers: true,
+        }
+    })
+}
