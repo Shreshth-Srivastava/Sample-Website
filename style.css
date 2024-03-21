@@ -346,20 +346,20 @@ nav > h1 {
 
 #about-1 {
   width: 80%;
-  height: 4vw;
-  /* border-bottom: 7px solid white; */
+  height: 5vw;
+  border-bottom: .4rem solid white;
   /* display: flex;
   justify-content: center;
   align-items: center; */
   text-align: center;
-  /* overflow: hidden; */
-  margin-bottom: 1rem;
+  overflow: hidden;
+  /* margin-bottom: 1rem; */
 }
 
 #about-1 > h1 {
   padding: 1rem;
   font-size: 2rem;
-  border-bottom: 0.4rem solid white;
+  /* border-bottom: 0.4rem solid white; */
 }
 
 #about-2 {
@@ -367,6 +367,7 @@ nav > h1 {
   height: calc(100% - 4vw);
   line-height: 1.35rem;
   padding: 1vw 0;
+  overflow: hidden;
   /* border: 2px solid red; */
 }
 
@@ -390,6 +391,7 @@ nav > h1 {
   align-items: center;
   justify-content: space-between;
   padding: 1vw;
+  overflow: hidden;
 }
 
 #cards-container-2 {
@@ -400,6 +402,7 @@ nav > h1 {
   align-items: center;
   justify-content: space-between;
   padding: 0 1vw;
+  overflow: hidden;
 }
 
 #card-1 {
@@ -487,13 +490,14 @@ nav > h1 {
 .page-title {
   text-align: center;
   width: 64%;
-  height: 4vw;
+  height: 5vw;
   color: white;
+  overflow: hidden;
+  border-bottom: 0.4rem solid white;
 }
 
 .page-title > h1 {
   padding: 1rem;
-  border-bottom: 0.4rem solid white;
   font-size: 2rem;
 }
 
@@ -905,11 +909,6 @@ footer {
     width: 70%;
     font-size: 2.5vw;
     line-height: .6rem;
-  }
-  #card-2>p,#card-3>p{
-    /* border: 2px solid white; */
-    padding: 0 .5rem;
-    font-size: 2.2vw;
   }
   .page-title {
     width: 80%;
