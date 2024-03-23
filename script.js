@@ -110,8 +110,6 @@ Reviews.addEventListener("mouseleave",()=>{
     });
 })
 
-let tl = gsap.timeline();
-
 var vw = window.innerWidth;
 var vh = window.innerHeight;
 
@@ -181,7 +179,7 @@ else{
     gsap.from('#about-1>h1',{
         y: 100,
         duration: 1,
-        delay: .5,
+        delay: 2.5,
         opacity: 0,
         scrollTrigger:{
             trigger: '#about-1>h1',
@@ -194,7 +192,7 @@ else{
     gsap.from('#about-2>p',{
         y: -500,
         duration: 2,
-        delay: .5,
+        delay: 2.5,
         opacity: 0,
         scrollTrigger:{
             trigger: '#about-2>p',
