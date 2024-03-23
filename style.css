@@ -799,7 +799,7 @@ footer {
     right: 9%;
   }
   #main{
-    max-height: 100vh;
+    max-height: 50vh;
   }
   nav {
     height: 6vh;
