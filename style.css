@@ -667,7 +667,9 @@ footer {
     /* border: 2px solid red; */
   }
   #about-1 {
-    margin-bottom: 4rem;
+    height: 7vw;
+    padding: 0;
+    /* margin-bottom: 4rem; */
   }
   #cards-container{
     margin-top: 2rem;
@@ -692,6 +694,9 @@ footer {
   }
   #card-2>p,#card-3>p{
     padding: 0 .5rem;
+  }
+  .page-title{
+    height: 6vw;
   }
 }
 
@@ -766,6 +771,15 @@ footer {
   }
   #card-2>p,#card-3>p{
     padding: 0 .5rem;
+  }
+  .page-title{
+    height: 8vw;
+    /* border: 2px solid blue; */
+  }
+  .page-title>h1{
+    /* border: 2px solid red; */
+    /* padding: -10rem 0 0 0; */
+    font-size: 2rem;
   }
   #reviews {
     width: 90%;
