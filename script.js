@@ -44,11 +44,139 @@ ScrollTrigger.refresh();
 //     smooth: true
 // });
 
+var vw = window.innerWidth;
+var vh = window.innerHeight;
+
 window.addEventListener('load',()=>{
     const loader = document.querySelector('#loader');
     const main = document.querySelector('#main');
     main.style.maxHeight = "400vh";
     loader.style.display = "none";
+    if(vw > vh){
+        gsap.from('#about-1>h1',{
+            y: 100,
+            duration: .5,
+            // delay: .5,
+            opacity: 0,
+            scrollTrigger:{
+                trigger: '#about-1>h1',
+                scroller: '#main',
+                start: "top 100%",
+                // markers: true,
+            }
+        })
+    
+        gsap.from('#about-2>p',{
+            y: -500,
+            duration: 2.5,
+            // delay: .5,
+            opacity: 0,
+            scrollTrigger:{
+                trigger: '#about-2>p',
+                scroller: '#main',
+                start: "top 30%",
+                // markers: true,
+            }
+        })
+    
+        gsap.from('#card-1,#card-3',{
+            x: -1500,
+            duration: 2,
+            // opacity: 0,
+            scrollTrigger:{
+                trigger: "#card-1,#card-3",
+                scroller: "#main",
+                start: "start 60%",
+                // markers: true,
+            }
+        })
+    
+        gsap.from('#card-2,#card-4',{
+            x: 1500,
+            duration: 2,
+            // opacity: 0,
+            scrollTrigger:{
+                trigger: "#card-1,#card-3",
+                scroller: "#main",
+                start: "start 60%",
+                // markers: true,
+            }
+        })
+    
+        gsap.from('.page-title>h1',{
+            y: 100,
+            duartion: .5,
+            scrollTrigger:{
+                trigger: '.page-title>h1',
+                scroller: '#main',
+                start: "top 100%",
+                // markers: true,
+            }
+        })
+    }
+    else{
+        gsap.from('#about-1>h1',{
+            y: 100,
+            duration: 1,
+            // delay: 2.5,
+            opacity: 0,
+            scrollTrigger:{
+                trigger: '#about-1>h1',
+                scroller: '#main',
+                start: "top 100%",
+                // markers: true,
+            }
+        })
+    
+        gsap.from('#about-2>p',{
+            y: -500,
+            duration: 2,
+            // delay: 2.5,
+            opacity: 0,
+            scrollTrigger:{
+                trigger: '#about-2>p',
+                scroller: '#main',
+                start: "top 110%",
+                // markers: true,
+            }
+        })
+    
+        gsap.from('#card-1,#card-3',{
+            x: -1500,
+            duration: 2,
+            // opacity: 0,
+            scrollTrigger:{
+                trigger: "#card-1,#card-3",
+                scroller: "#main",
+                start: "start 40%",
+                markers: true,
+            }
+        })
+    
+        gsap.from('#card-2,#card-4',{
+            x: 1500,
+            duration: 2,
+            // opacity: 0,
+            scrollTrigger:{
+                trigger: "#card-1,#card-3",
+                scroller: "#main",
+                start: "start 40%",
+                markers: true,
+            }
+        })
+    
+        gsap.from('.page-title>h1',{
+            y: 100,
+            duration: 2,
+            // delay: .3,
+            scrollTrigger:{
+                trigger: '.page-title>h1',
+                scroller: '#main',
+                start: "top 80%",
+                // markers: true,
+            }
+        })
+    }
 })
 
 const navbar = document.querySelector("#navbar");
@@ -109,132 +237,3 @@ Reviews.addEventListener("mouseleave",()=>{
         element.style.animationPlayState = 'running';
     });
 })
-
-var vw = window.innerWidth;
-var vh = window.innerHeight;
-
-if(vw > vh){
-    gsap.from('#about-1>h1',{
-        y: 100,
-        duration: .5,
-        // delay: .5,
-        opacity: 0,
-        scrollTrigger:{
-            trigger: '#about-1>h1',
-            scroller: '#main',
-            start: "top 100%",
-            // markers: true,
-        }
-    })
-
-    gsap.from('#about-2>p',{
-        y: -500,
-        duration: 2.5,
-        // delay: .5,
-        opacity: 0,
-        scrollTrigger:{
-            trigger: '#about-2>p',
-            scroller: '#main',
-            start: "top 30%",
-            // markers: true,
-        }
-    })
-
-    gsap.from('#card-1,#card-3',{
-        x: -1500,
-        duration: 2,
-        // opacity: 0,
-        scrollTrigger:{
-            trigger: "#card-1,#card-3",
-            scroller: "#main",
-            start: "start 60%",
-            // markers: true,
-        }
-    })
-
-    gsap.from('#card-2,#card-4',{
-        x: 1500,
-        duration: 2,
-        // opacity: 0,
-        scrollTrigger:{
-            trigger: "#card-1,#card-3",
-            scroller: "#main",
-            start: "start 60%",
-            // markers: true,
-        }
-    })
-
-    gsap.from('.page-title>h1',{
-        y: 100,
-        duartion: .5,
-        scrollTrigger:{
-            trigger: '.page-title>h1',
-            scroller: '#main',
-            start: "top 100%",
-            // markers: true,
-        }
-    })
-}
-else{
-    gsap.from('#about-1>h1',{
-        y: 100,
-        duration: 1,
-        delay: 2.5,
-        opacity: 0,
-        scrollTrigger:{
-            trigger: '#about-1>h1',
-            scroller: '#main',
-            start: "top 100%",
-            // markers: true,
-        }
-    })
-
-    gsap.from('#about-2>p',{
-        y: -500,
-        duration: 2,
-        delay: 2.5,
-        opacity: 0,
-        scrollTrigger:{
-            trigger: '#about-2>p',
-            scroller: '#main',
-            start: "top 110%",
-            // markers: true,
-        }
-    })
-
-    gsap.from('#card-1,#card-3',{
-        x: -1500,
-        duration: 2,
-        // opacity: 0,
-        scrollTrigger:{
-            trigger: "#card-1,#card-3",
-            scroller: "#main",
-            start: "start 40%",
-            // markers: true,
-        }
-    })
-
-    gsap.from('#card-2,#card-4',{
-        x: 1500,
-        duration: 2,
-        // opacity: 0,
-        scrollTrigger:{
-            trigger: "#card-1,#card-3",
-            scroller: "#main",
-            start: "start 40%",
-            // markers: true,
-        }
-    })
-
-    gsap.from('.page-title>h1',{
-        y: 100,
-        duartion: 2,
-        delay: .3,
-        scrollTrigger:{
-            trigger: '.page-title>h1',
-            scroller: '#main',
-            start: "top 20%",
-            // markers: true,
-        }
-    })
-}
