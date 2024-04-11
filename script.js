@@ -149,7 +149,7 @@ window.addEventListener('load',()=>{
                 trigger: "#card-1,#card-3",
                 scroller: "#main",
                 start: "start 40%",
-                markers: true,
+                // markers: true,
             }
         })
     
@@ -161,7 +161,7 @@ window.addEventListener('load',()=>{
                 trigger: "#card-1,#card-3",
                 scroller: "#main",
                 start: "start 40%",
-                markers: true,
+                // markers: true,
             }
         })
     
