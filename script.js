@@ -148,7 +148,7 @@ window.addEventListener('load',()=>{
             scrollTrigger:{
                 trigger: "#card-1,#card-3",
                 scroller: "#main",
-                start: "start 40%",
+                start: "top bottom",
                 // markers: true,
             }
         })
@@ -160,7 +160,7 @@ window.addEventListener('load',()=>{
             scrollTrigger:{
                 trigger: "#card-1,#card-3",
                 scroller: "#main",
-                start: "start 40%",
+                start: "top bottom",
                 // markers: true,
             }
         })
@@ -170,9 +170,9 @@ window.addEventListener('load',()=>{
             duration: 2,
             // delay: .3,
             scrollTrigger:{
-                trigger: '.page-title>h1',
+                trigger: '.page-title',
                 scroller: '#main',
-                start: "top 80%",
+                start: "top bottom",
                 // markers: true,
             }
         })
