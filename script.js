@@ -105,7 +105,7 @@ window.addEventListener('load',()=>{
     
         gsap.from('.page-title>h1',{
             y: 100,
-            duartion: .5,
+            duration: .5,
             scrollTrigger:{
                 trigger: '.page-title>h1',
                 scroller: '#main',
